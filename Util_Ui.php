@@ -466,8 +466,7 @@ class Util_Ui {
 				$postfix = $label_or_array['postfix'];
 			}
 
-			echo '<label><input type="radio" id="' . esc_attr( $name . '__' . $key )  .
-				'" name="' . esc_attr( $name )  .
+			echo '<label><input type="radio" name="' . esc_attr( $name )  .
 				'" value="' . esc_attr( $key ) . '"';
 			checked( $value, $key );
 			disabled( $disabled || $item_disabled );

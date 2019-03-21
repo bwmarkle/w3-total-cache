@@ -1414,7 +1414,7 @@ class PgCache_ContentGrabber {
 					$page_key_extension['content_type'] : '';
 
 				if ( @preg_match( "~(text/xml|text/xsl|application/rdf\+xml|application/rss\+xml|application/atom\+xml)~i", $content_type ) ||
-					preg_match( "~/feed(/|$)~", $request_url ) ||
+					strpos( $request_url, "/feed/" ) !== false ||
 					strpos( $request_url, ".xsl" ) !== false ) {
 					$key_postfix = '.xml';
 				}
